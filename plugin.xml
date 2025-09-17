@@ -7,7 +7,7 @@
     <description>Cordova plugin for iOS Scene Delegate support</description>
     <license>MIT</license>
     <author>Victor Correa</author>
-    <repo>https://github.com/your-username/cordova-plugin-ionic-scene-delegate</repo>
+    <repo>https://github.com/vcorreaj/cordova-plugin-ionic-scene-delegate.git</repo>
     
     <engines>
         <engine name="cordova" version=">=9.0.0" />

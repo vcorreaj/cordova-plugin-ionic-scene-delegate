@@ -19,12 +19,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/your-username/cordova-plugin-ionic-scene-delegate"
+    "url": "https://github.com/vcorreaj/cordova-plugin-ionic-scene-delegate.git"
   },
   "bugs": {
-    "url": "https://github.com/your-username/cordova-plugin-ionic-scene-delegate/issues"
+    "url": "https://github.com/vcorreaj/cordova-plugin-ionic-scene-delegate.git/issues"
   },
-  "homepage": "https://github.com/your-username/cordova-plugin-ionic-scene-delegate#readme",
+  "homepage": "https://github.com/vcorreaj/cordova-plugin-ionic-scene-delegate.git#readme",
   "engines": {
     "cordova": ">=9.0.0",
     "cordova-ios": ">=6.0.0"
