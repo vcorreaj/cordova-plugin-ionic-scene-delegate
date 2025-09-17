@@ -50,9 +50,7 @@
         <source-file src="src/ios/CDVSceneDelegate.m" />
         <header-file src="src/ios/CDVSceneDelegate+Commands.h" />
         <source-file src="src/ios/CDVSceneDelegate+Commands.m" />
-        
-        <!-- Optional Swift support -->
-        <source-file src="src/ios/IonicSceneDelegate.swift" />
+         
         
         <hook type="after_plugin_install" src="scripts/postInstall.js" />
     </platform>
