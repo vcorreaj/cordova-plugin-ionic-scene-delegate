@@ -1,57 +1,33 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
-        id="cordova-plugin-ionic-scene-delegate"
-        version="1.0.0">
-    
-    <name>Ionic Scene Delegate</name>
-    <description>Cordova plugin for iOS Scene Delegate support</description>
-    <license>MIT</license>
-    <author>Victor Correa</author>
-    <repo>https://github.com/vcorreaj/cordova-plugin-ionic-scene-delegate.git</repo>
-    
-    <engines>
-        <engine name="cordova" version=">=9.0.0" />
-        <engine name="cordova-ios" version=">=6.0.0" />
-    </engines>
-    
-    <js-module src="www/IonicSceneDelegate.js" name="IonicSceneDelegate">
-        <clobbers target="IonicSceneDelegate" />
-    </js-module>
-    
-    <platform name="ios">
-        <config-file target="config.xml" parent="/*">
-            <feature name="CDVSceneDelegate">
-                <param name="ios-package" value="CDVSceneDelegate" />
-            </feature>
-        </config-file>
-        
-        <config-file target="*-Info.plist" parent="UIApplicationSceneManifest">
+<platform name="ios">
+    <config-file target="config.xml" parent="/*">
+        <feature name="CDVSceneDelegate">
+            <param name="ios-package" value="CDVSceneDelegate" />
+        </feature>
+    </config-file> 
+    <config-file target="*-Info.plist" parent="UIApplicationSceneManifest">
+        <dict>
+            <key>UIApplicationSupportsMultipleScenes</key>
+            <false/>
+            <key>UISceneConfigurations</key>
             <dict>
-                <key>UIApplicationSupportsMultipleScenes</key>
-                <false/>
-                <key>UISceneConfigurations</key>
-                <dict>
-                    <key>UIWindowSceneSessionRoleApplication</key>
-                    <array>
-                        <dict>
-                            <key>UISceneConfigurationName</key>
-                            <string>Default Configuration</string>
-                            <key>UISceneDelegateClassName</key>
-                            <string>CDVSceneDelegate</string>
-                            <key>UISceneStoryboardFile</key>
-                            <string>Main</string>
-                        </dict>
-                    </array>
-                </dict>
+                <key>UIWindowSceneSessionRoleApplication</key>
+                <array>
+                    <dict>
+                        <key>UISceneConfigurationName</key>
+                        <string>Default Configuration</string>
+                        <key>UISceneDelegateClassName</key>
+                        <string>CDVSceneDelegate</string>
+                        <key>UISceneStoryboardFile</key>
+                        <string>Main</string>
+                    </dict>
+                </array>
             </dict>
-        </config-file>
-        
-        <header-file src="src/ios/CDVSceneDelegate.h" />
-        <source-file src="src/ios/CDVSceneDelegate.m" />
-        <header-file src="src/ios/CDVSceneDelegate+Commands.h" />
-        <source-file src="src/ios/CDVSceneDelegate+Commands.m" />
-         
-        
-        <hook type="after_plugin_install" src="scripts/postInstall.js" />
-    </platform>
-</plugin>
+        </dict>
+    </config-file> 
+    <header-file src="src/ios/CDVSceneDelegate.h" />
+    <source-file src="src/ios/CDVSceneDelegate.m" />
+    <header-file src="src/ios/CDVSceneDelegate+Commands.h" />
+    <source-file src="src/ios/CDVSceneDelegate+Commands.m" /> 
+    <framework src="CoreGraphics.framework" />
+    <framework src="UIKit.framework" />
+</platform>
