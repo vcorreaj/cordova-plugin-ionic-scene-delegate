@@ -1,0 +1,32 @@
+{
+  "name": "cordova-plugin-ionic-scene-delegate",
+  "version": "1.0.0",
+  "description": "Cordova plugin for iOS Scene Delegate support",
+  "main": "www/IonicSceneDelegate.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "cordova",
+    "ionic",
+    "scene",
+    "delegate",
+    "ios",
+    "ecosystem:cordova",
+    "cordova-ios"
+  ],
+  "author": "Victor correa",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/cordova-plugin-ionic-scene-delegate"
+  },
+  "bugs": {
+    "url": "https://github.com/your-username/cordova-plugin-ionic-scene-delegate/issues"
+  },
+  "homepage": "https://github.com/your-username/cordova-plugin-ionic-scene-delegate#readme",
+  "engines": {
+    "cordova": ">=9.0.0",
+    "cordova-ios": ">=6.0.0"
+  }
+}
