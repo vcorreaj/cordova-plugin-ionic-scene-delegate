@@ -4,20 +4,13 @@
 
 @implementation CDVSceneDelegate
 
-- (CDVViewController *)createCordovaViewController {
-    CDVViewController *viewController = [[CDVViewController alloc] init];
-    viewController.wwwFolderName = @"www";
-    viewController.startPage = @"index.html";
-    return viewController;
-}
-
 - (void)scene:(UIScene *)scene willConnectToSession:(UISceneSession *)session options:(UISceneConnectionOptions *)connectionOptions {
     if (![scene isKindOfClass:[UIWindowScene class]]) return;
     
     UIWindowScene *windowScene = (UIWindowScene *)scene;
     self.window = [[UIWindow alloc] initWithWindowScene:windowScene];
     
-    // ✅ CREAR CDVViewController PROGRAMÁTICAMENTE - SIN STORYBOARD
+    // ✅ CREACIÓN PROGRAMÁTICA - SIN STORYBOARD
     self.viewController = [[CDVViewController alloc] init];
     self.viewController.wwwFolderName = @"www";
     self.viewController.startPage = @"index.html";
@@ -29,6 +22,14 @@
     // Handle URL options if any
     if (connectionOptions.URLContexts.count > 0) {
         [self handleURLContexts:connectionOptions.URLContexts];
+    }
+}
+
+- (void)handleURLContexts:(NSSet<UIOpenURLContext *> *)URLContexts {
+    for (UIOpenURLContext *context in URLContexts) {
+        NSURL *url = context.URL;
+        // Handle the URL as needed for your app
+        NSLog(@"Handle URL: %@", url);
     }
 }
 
