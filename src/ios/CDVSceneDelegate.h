@@ -8,6 +8,9 @@ NS_ASSUME_NONNULL_BEGIN
 @property (strong, nonatomic) UIWindow *window;
 @property (strong, nonatomic) CDVViewController *viewController;
 
+// Método para manejar la creación segura del view controller
+- (CDVViewController *)createCordovaViewController;
+
 @end
 
 NS_ASSUME_NONNULL_END

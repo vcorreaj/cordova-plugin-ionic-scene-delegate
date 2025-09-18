@@ -6,11 +6,13 @@
     <name>Ionic Scene Delegate</name>
     <description>Cordova plugin for iOS Scene Delegate support</description>
     <license>MIT</license>
-    <author>Victor correa</author> 
+    <author>Victor correa</author>
+    
     <engines>
         <engine name="cordova" version=">=9.0.0" />
         <engine name="cordova-ios" version=">=6.0.0" />
-    </engines> 
+    </engines>
+    
     <js-module src="www/IonicSceneDelegate.js" name="IonicSceneDelegate">
         <clobbers target="IonicSceneDelegate" />
     </js-module>
@@ -34,9 +36,7 @@
                             <key>UISceneConfigurationName</key>
                             <string>Default Configuration</string>
                             <key>UISceneDelegateClassName</key>
-                            <string>CDVSceneDelegate</string>
-                            <key>UISceneStoryboardFile</key>
-                            <string>Main</string>
+                            <string>CDVSceneDelegate</string> 
                         </dict>
                     </array>
                 </dict>
@@ -46,6 +46,9 @@
         <header-file src="src/ios/CDVSceneDelegate.h" />
         <source-file src="src/ios/CDVSceneDelegate.m" />
         <header-file src="src/ios/CDVSceneDelegate+Commands.h" />
-        <source-file src="src/ios/CDVSceneDelegate+Commands.m" /> 
+        <source-file src="src/ios/CDVSceneDelegate+Commands.m" />
+         
+        <framework src="CoreGraphics.framework" />
+        <framework src="UIKit.framework" />
     </platform>
 </plugin>

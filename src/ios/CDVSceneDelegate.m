@@ -4,22 +4,23 @@
 
 @implementation CDVSceneDelegate
 
+- (CDVViewController *)createCordovaViewController {
+    CDVViewController *viewController = [[CDVViewController alloc] init];
+    viewController.wwwFolderName = @"www";
+    viewController.startPage = @"index.html";
+    return viewController;
+}
+
 - (void)scene:(UIScene *)scene willConnectToSession:(UISceneSession *)session options:(UISceneConnectionOptions *)connectionOptions {
     if (![scene isKindOfClass:[UIWindowScene class]]) return;
     
     UIWindowScene *windowScene = (UIWindowScene *)scene;
     self.window = [[UIWindow alloc] initWithWindowScene:windowScene];
     
-    // Create Cordova view controller from storyboard or programmatically
-    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-    self.viewController = [storyboard instantiateInitialViewController];
-    
-    // If storyboard fails, create programmatically
-    if (!self.viewController) {
-        self.viewController = [[CDVViewController alloc] init];
-        self.viewController.wwwFolderName = @"www";
-        self.viewController.startPage = @"index.html";
-    }
+    // ✅ CREAR CDVViewController PROGRAMÁTICAMENTE - SIN STORYBOARD
+    self.viewController = [[CDVViewController alloc] init];
+    self.viewController.wwwFolderName = @"www";
+    self.viewController.startPage = @"index.html";
     
     // Configure window
     self.window.rootViewController = self.viewController;
